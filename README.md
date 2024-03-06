@@ -1,4 +1,4 @@
-# Radiology Report Processor
+# auto_followup: Simple Radiology Report Processor
 
 ## Description
 This Python script processes radiology reports to determine the need for a follow-up exam. It reads a given input CSV file containing radiology reports, runs each report through a Large Language Model (LLM) to summarize the findings, and outputs the results to a new CSV file. This process includes assessing whether a follow-up exam is recommended based on the summarized findings.
