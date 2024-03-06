@@ -4,7 +4,7 @@
 This Python script processes radiology reports to determine the need for a follow-up exam. It reads a given input CSV file containing radiology reports, runs each report through a Large Language Model (LLM) to summarize the findings, and outputs the results to a new CSV file. This process includes assessing whether a follow-up exam is recommended based on the summarized findings.
 
 ## Installation
-To run this script, you need Python installed on your machine along with several dependencies. The script has been tested on Python 3.8+.
+To run this script, you need ollama and Python installed on your machine along with several dependencies. The script has been tested on Python 3.8+.
 
 First, ensure you have Python installed. Then, install the required packages using pip:
 
