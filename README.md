@@ -15,10 +15,15 @@ pip install pandas argparse subprocess tempfile os csv
 ## Usage
 To use this script, you need to provide an input CSV file and specify an output file for the results. The input CSV file should have at least two columns: ACC_NUM and TEXT, where ACC_NUM is a unique identifier for each report, and TEXT contains the radiology report text lines.
 
-Example
+##Example
 If your input file is named radiology_reports.csv and you want to output the results to processed_reports.csv, run the following command:
 ```bash
-python radiology_report_processor.py --input_csv path/to/your/input.csv --output_csv path/to/your/output.csv
+python followup.py --input_csv path/to/your/input.csv --output_csv path/to/your/output.csv
 ```
 
+##Output
+Results are printed to screen and saved to an a csv file.
+```Example
+The radiologist's impression is a diagnosis of "lingular pneumonia," and they recommend a follow-up radiographic examination to monitor the resolution of the pneumonia in 4-6 weeks. Therefore, a follow-up exam is recommended based on the report's findings.
+```
 After running the script, processed_reports.csv will contain the ACC_NUM, the original TEXT, and the LLM_Output indicating the summary of the findings and whether a follow-up exam is recommended.
