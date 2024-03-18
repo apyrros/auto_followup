@@ -14,8 +14,9 @@ def run_llm(report_text):
 
     # Define the LLM command and the prompt
     command = "ollama run mistral"
-    prompt = "Please read this radiology report and summarize the findings, indicating whether a follow-up exam is recommended or not."
-    full_command = f"{command} '{prompt}' $(cat '{tmp_path}')"
+    prompt1 = "You are answering a boolean question. The question will either be true/yes/affirmative, or false/no/negative. IMPORTANT: If yes or true or affirmative, return '1'. If no or false or negative, return '0'."
+    prompt2 = "Does this report mention a follow-up exam?"
+    full_command = f"{command} '{prompt1}' $(cat '{tmp_path}') '{prompt2}'"
 
     try:
         result_process = subprocess.run(full_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
